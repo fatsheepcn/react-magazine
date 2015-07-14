@@ -1,6 +1,6 @@
 var React = require('react');
 
-var 404Page = React.createClass({
+var NotFoundPage = React.createClass({
     render: function(){
         return (
             <h2>Page Not Found.</h2>
@@ -8,4 +8,4 @@ var 404Page = React.createClass({
     }
 });
 
-module.exports = 404Page;
+module.exports = NotFoundPage;

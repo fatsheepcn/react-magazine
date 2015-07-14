@@ -6,13 +6,14 @@ var NotFoundRoute = Router.NotFoundRoute;
 var DefaultRoute = Router.DefaultRoute;
 var Redirect = Router.Redirect;
 
-var HomePage = require('./pages/HomePage');
-var ListPage = require('./pages/ListPage');
-var DetailPage = require('./pages/DetailPage');
-var NotFoundPage = require('./pages/404Page');
+var App = require('./app');
+var HomePage = require('../pages/HomePage');
+var ListPage = require('../pages/ListPage');
+var DetailPage = require('../pages/DetailPage');
+var NotFoundPage = require('../pages/NotFoundPage');
 
 module.exports = (
-    <Route path='/' handler={app}>
+    <Route path='/' handler={App}>
         <DefaultRoute handler={HomePage} />
         <Redirect from='/' to='category' params={{catId: 18}} />
         <Route name='category' path='category/:catId' handler={ListPage} />

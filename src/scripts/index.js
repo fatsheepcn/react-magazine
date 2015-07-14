@@ -6,5 +6,5 @@ var Router = require('react-router');
 var routes = require('./routes');
 
 Router.run(routes, Router.HistoryLocation, function(Handler, state) {
-    React.render(<Handler params={state.params} />, documment.body);
+    React.render(<Handler params={state.params} query={state.query} />, documment.getElementById('app'));
 });
